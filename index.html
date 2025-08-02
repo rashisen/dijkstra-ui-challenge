@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dijkstra’s Algorithm Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero-bg">
+    <h1 class="heading">Dijkstra’s Algorithm Calculator</h1>
+    <p class="subheading">Discovering Optimal Routes Through Nodes Using Dijkstra's Method</p>
+  </div>
+
+  <main class="card">
+    <div class="form-wrapper">
+      <h2 class="form-title">Select Path</h2>
+
+      <div class="form-group">
+        <label for="fromNode">From Node</label>
+        <div class="select-wrapper">
+            <select id="fromNode">
+          <option value="">Select</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+        </select>
+        <img src="assets/chevron-down.svg" alt="" class="dropdown-icon" />
+        </div>       
+      </div>
+
+      <div class="form-group">
+        <label for="toNode">To Node</label>
+        <div class="select-wrapper">
+            <select id="toNode">
+          <option value="">Select</option>
+          <option value="X">X</option>
+          <option value="Y">Y</option>
+        </select>
+        <img src="assets/chevron-down.svg" alt="" class="dropdown-icon" />
+        </div>       
+      </div>
+
+      <div class="button-group">
+        <button class="btn btn-clear">Clear</button>
+        <button class="btn btn-calculate">
+          Calculate
+          <img src="assets/calculator-icon.svg" alt="" class="btn-icon" />
+        </button>
+      </div>
+    </div>
+
+    <div class="illustration-result-container">
+    <div class="illustration-wrapper" id="illustration">
+      <img src="assets/illustration.svg" alt="Illustration" class="illustration" />
+    </div>
+
+    <div class="result-wrapper" id="resultBox" style="display: none;">
+        <h2 class="result-title">Result</h2>
+      <div class="result-box">
+        <p id="result-text"></p>
+      </div>
+    </div>
+  </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
