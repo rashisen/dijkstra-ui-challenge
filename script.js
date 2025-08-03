@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
   const calculateBtn = document.querySelector('.btn-calculate');
   const clearBtn = document.querySelector('.btn-clear');
-  const resultText = document.getElementById('resultText');
-  const resultBox = document.getElementById('result-box');
-  const resultContainer = document.getElementById('resultContainer');
-  const illustration = document.getElementById('illustration');
+  const resultText = document.getElementById('result-text');
+  const resultBox = document.getElementById('resultBox');
   const fromNode = document.getElementById('fromNode');
   const toNode = document.getElementById('toNode');
+  const illustration = document.getElementById('illustration');
+  const container = document.querySelector('.illustration-result-container');
+  const card = document.querySelector('.card');
 
   clearBtn.addEventListener('click', function () {
     resultBox.style.display = 'none';
@@ -14,9 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
     resultText.innerHTML = '';
     fromNode.value = '';
     toNode.value = '';
+    container.classList.remove('show-result');
+    card.style.height = 'auto';
   });
 
-  calculateBtn.addEventListener('click', () => {
+  calculateBtn.addEventListener('click', function () {
     const from = fromNode.value;
     const to = toNode.value;
 
@@ -25,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // Dummy path and distance for demonstration
     const path = ['A', 'B', 'C', 'D'];
     const distance = 10;
 
@@ -35,8 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
       Total Distance: ${distance}
     `;
 
-    // Toggle views
-    if (illustration) illustration.style.display = 'none';
-    if (resultContainer) resultContainer.style.display = 'block';
+    illustration.style.display = 'none';
+    resultBox.style.display = 'block';
+    container.classList.add('show-result');
+    card.style.minHeight = '480px';
   });
 });
