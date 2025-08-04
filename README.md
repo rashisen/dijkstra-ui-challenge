@@ -20,7 +20,7 @@ Just open `index.html` in your browser — no build tools or frameworks required
 The current implementation is partially responsive, but there are known limitations:
 
 - **Limited mobile support**  
-  *Issue:* Layout does not adapt well on very small screens (e.g., phones under 480px).  
+  *Issue:* Layout does not adapt well on small screens.  
   *Impact:* Elements may appear cramped or overflow outside the viewport.  
   *Planned fix:* Add more granular media queries to support smaller breakpoints.
 
@@ -28,11 +28,6 @@ The current implementation is partially responsive, but there are known limitati
   *Issue:* Several layout sections use fixed pixel widths and paddings.  
   *Impact:* Layout may appear broken or misaligned on uncommon screen sizes.  
   *Planned fix:* Refactor layout to use flexible units (`%`, `vw`, `vh`) and improve responsiveness.
-
-- **Dropdown icon misalignment**  
-  *Issue:* The custom dropdown chevron icon may not align perfectly across all browsers.  
-  *Impact:* Slight inconsistencies in dropdown alignment, especially in Safari and Firefox.  
-  *Planned fix:* Use flexbox for better vertical alignment and test across major browsers.
 
 - **Layout shift for form and result containers**  
   *Issue:* When the result box is shown, the combined layout may not gracefully stack on smaller screens.  
