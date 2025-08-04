@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const container = document.querySelector('.illustration-result-container');
   const card = document.querySelector('.card');
 
+  //clear button 
   clearBtn.addEventListener('click', function () {
     resultBox.style.display = 'none';
     illustration.style.display = 'flex';
@@ -16,9 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
     fromNode.value = '';
     toNode.value = '';
     container.classList.remove('show-result');
-    card.style.height = 'auto';
+    card.style.minHeight = '360px';
   });
 
+  //calculate button
   calculateBtn.addEventListener('click', function () {
     const from = fromNode.value;
     const to = toNode.value;
@@ -32,14 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const distance = 10;
 
     resultText.innerHTML = `
-      From Node Name = “${from}”, To Node Name = ”${to}”:<br />
+      From Node Name = “${from}”, To Node Name = ”${to}”:
       ${path.join(', ')}<br />
-      Total Distance: ${distance}
+      </br>Total Distance: ${distance}
     `;
 
     illustration.style.display = 'none';
     resultBox.style.display = 'block';
     container.classList.add('show-result');
-    card.style.minHeight = '480px';
+    card.style.minHeight = '420px';
   });
 });
