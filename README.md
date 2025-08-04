@@ -5,7 +5,7 @@ It includes 3 UI states: initial form, filled form, and result display.
 
 ## Setup
 
-Just open `index.html` in your browser — no build tools or frameworks required.
+Open `index.html` in your browser — no build tools or frameworks required.
 
 ## Structure
 
